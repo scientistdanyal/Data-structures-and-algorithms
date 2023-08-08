@@ -1,4 +1,3 @@
-// JavaScript code
 function MaxPairWiseProduct(numbers) {
     let results = 0;
     const n = numbers.length;
