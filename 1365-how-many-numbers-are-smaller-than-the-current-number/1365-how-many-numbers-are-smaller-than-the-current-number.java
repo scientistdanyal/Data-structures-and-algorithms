@@ -1,6 +1,7 @@
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        ArrayList<Integer> list = new ArrayList<>();
+        
+        int[] list = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             int count = 0;
             for (int j = 0; j < nums.length; j++) {
@@ -8,15 +9,9 @@ class Solution {
                     count++;
                 }
             }
-            list.add(count);
+            list[i] = count;
         }
-        
-        // Convert ArrayList<Integer> to int[]
-        int[] result = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            result[i] = list.get(i);
-        }
-        
-        return result;
+        return list;
+       
     }
 }
